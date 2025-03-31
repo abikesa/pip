@@ -1,6 +1,0 @@
-# Bibliography, References, Archetypes
-
-
-```{bibliography}
-```
-
