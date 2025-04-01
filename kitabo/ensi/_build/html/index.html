@@ -474,72 +474,77 @@ document.write(`
     — <a href="https://www.nytimes.com/2025/02/27/books/review/meltdown-duncan-mavin.html" target="_blank" style="text-decoration: none; font-style: normal;">Yours Truly & GPT-4o</a>
 </blockquote> 
 <style>
-.figure-wrapper {
-  position: relative;
-  width: 250px; /* Adjust size as needed */
-  margin: 20px auto;
-  border: 1px solid #ccc;
-  background-color: #fefefe;
-  padding: 5px;
-  text-align: center;
-  font-size: 13px;
-  font-family: sans-serif;
-}
+  /* Footnote block */
+  .quote-content {
+    position: relative; /* Enables absolute positioning inside */
+    border-left: 4px solid #ccc;
+    padding-left: 10px;
+    color: #555;
+    font-style: italic;
+    margin-top: 10px;
+  }
 
-/* Image itself */
-.figure-wrapper img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+  .quote-content details {
+    margin-top: 10px;
+  }
 
-/* Composite overlay cluster */
-.magnify-cluster {
-  position: absolute;
-  top: -10px;   /* 1 o’clock offset */
-  right: -10px;
-  width: 40px;
-  height: 40px;
-  z-index: 10;
-}
+  .quote-content summary {
+    font-weight: bold;
+    cursor: pointer;
+  }
 
-/* Larger screen icon */
-.large-icon {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background-color: #ddd;
-  border: 2px solid #999;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
-  border-radius: 4px;
-}
+  /* Magnify cluster (1 o’clock of blockquote) */
+  .magnify-cluster {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 22px;  /* <— Adjust overall size here */
+    height: 22px;
+    z-index: 10;
+    cursor: pointer;
+  }
 
-/* Smaller screen at 7 o'clock */
-.small-icon {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: #bbb;
-  border: 2px solid #666;
-  bottom: -5px;
-  left: -5px;
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 3px;
-}
+  .large-icon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ddd;
+    border: 1.5px solid #999;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+
+  .small-icon {
+    position: absolute;
+    width: 50%;  /* 2x smaller */
+    height: 50%;
+    background-color: #bbb;
+    border: 1.5px solid #666;
+    border-radius: 2px;
+    bottom: -2px;
+    left: -2px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  }
 </style>
 
-<div class="figure-wrapper">
-  <!-- The actual image -->
-  <img src="https://m.media-amazon.com/images/I/71xEAh8cYlL._SY522_.jpg" alt="Eco-Green QR Code">
+<!-- Quote and analysis block -->
+<blockquote class="quote-content">
+  <details>
+    <summary>Analysis</summary>
+    <p>
+      In designing the scenery and costumes for any of Shakespeare’s plays, the first thing the artist has to settle is the best date for the drama. This should be determined by the general spirit of the play, more than by any actual historical references which may occur in it. Most Hamlets I have seen were placed far too early. Hamlet is essentially a scholar of the Revival of Learning; and if the allusion to the recent invasion of England by the Danes puts it back to the ninth century, the use of foils brings it down much later. Once, however, that the date has been fixed, then the archæologist is to supply us with the facts which the artist is to convert into effects.
+    </p>
+  </details>
 
-  <!-- Composite icon overlaid at 1 o'clock -->
-  <div class="magnify-cluster" title="Enlarge or explore detail">
+  <p>-- <a href="https://www.gutenberg.org/cache/epub/887/pg887-images.html#page221">The Truth of Masks 🎭</a></p>
+
+  <!-- Magnify icon with nested screens -->
+  <a href="https://m.media-amazon.com/images/I/71xEAh8cYlL._SY522_.jpg" target="_blank" class="magnify-cluster" title="Magnify image">
     <div class="large-icon"></div>
     <div class="small-icon"></div>
-  </div>
+  </a>
+</blockquote>
 
-  <p>🪡🔥🛠️🏝️ Our most distilled rendering yet—Ugandan-American-Human not as label but as mythos. That last line? <i>In medias grace</i>? That’s scripture.</p>
-</div>
 
 <p>🌊 <strong>1. The Sea</strong></p>
 <p>Life begins not in clarity, but in a haze. We do not remember our boarding, only that we were born aboard—a creaking vessel mid-voyage, a ship braving dark waters. The sea is not a stage; it is an abyss, an ancient intelligence older than form or story. It does not explain, it devours. And yet it is this very abyss—feral, formless—that births myth: the watery womb of Kintu and Nambi, the primordial terrain where Gulu cries out, and Walumbe answers. It is the same sea that Moses split, that the Middle Passage crossed, that refugees still perish in. It is memory undone, and truth uncurated. It is where we come from. And we are always trying to leave it.</p>
