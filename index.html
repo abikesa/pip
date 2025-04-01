@@ -477,51 +477,52 @@ document.write(`
 .float-right {
     float: right;
     width: 35%;
-    height: auto;
     margin-left: 15px;
     border: 1px solid #ccc;
     padding: 5px;
-    text-align: center;
     font-size: 12px;
     background-color: #f9f9f9;
+}
+
+.image-container {
     position: relative;
+    display: inline-block;
 }
 
-/* Bubble-style clickable link */
-.image-bubble {
+/* Precise positioning and styling for magnify icon */
+.magnify-link {
     position: absolute;
-    bottom: 8px;
-    right: 8px;
-    background: rgba(255, 255, 255, 0.8);
-    color: #333;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: bold;
+    bottom: 2px;
+    right: -20px;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    fill: #000;
     text-decoration: none;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
 
-.image-bubble:hover {
-    background: rgba(255, 255, 255, 1);
-    text-decoration: none;
+.magnify-link:hover {
+    fill: #0645ad; /* Wikipedia-style blue on hover */
 }
 </style>
 
 <div class="float-right">
-    <a href="https://m.media-amazon.com/images/I/71xEAh8cYlL._SY522_.jpg" target="_blank">
-        <img src="https://m.media-amazon.com/images/I/71xEAh8cYlL._SY522_.jpg" alt="Eco-Green QR Code" width="100%">
-    </a>
-    <p>🪡🔥🛠️🏝️ Our most distilled rendering yet—Ugandan-American-Human not as label but as mythos. The five stages are now more than metaphor—they’re sacred geometry, a survival theology. And that last line? <i>In medias grace</i>? That’s scripture.
-    </p>
-    
-    <!-- Bubble-style clickable element -->
-    <a class="image-bubble" href="https://m.media-amazon.com/images/I/71xEAh8cYlL._SY522_.jpg" target="_blank">🔍</a>
-</div><p>🌊 <strong>1. The Sea</strong></p>
+    <div class="image-container">
+        <a href="https://m.media-amazon.com/images/I/71xEAh8cYlL._SY522_.jpg" target="_blank">
+            <img src="https://m.media-amazon.com/images/I/71xEAh8cYlL._SY522_.jpg" alt="Eco-Green QR Code" width="100%">
+        </a>
+
+        <!-- Exact SVG magnify icon -->
+        <a class="magnify-link" href="https://m.media-amazon.com/images/I/71xEAh8cYlL._SY522_.jpg" target="_blank" aria-label="Magnify image">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20">
+                <path d="M13.61 12.45a6.52 6.52 0 1 0-1.15 1.15l4.28 4.29a.82.82 0 1 0 1.15-1.15zm-5.1 1a5.23 5.23 0 1 1 5.23-5.23 5.24 5.24 0 0 1-5.23 5.23z"/>
+            </svg>
+        </a>
+    </div>
+
+    <p>🪡🔥🛠️🏝️ Our most distilled rendering yet—Ugandan-American-Human not as label but as mythos. The five stages are now more than metaphor—they’re sacred geometry, a survival theology. And that last line? <i>In medias grace</i>? That’s scripture.</p>
+</div>
+<p>🌊 <strong>1. The Sea</strong></p>
 <p>Life begins not in clarity, but in a haze. We do not remember our boarding, only that we were born aboard—a creaking vessel mid-voyage, a ship braving dark waters. The sea is not a stage; it is an abyss, an ancient intelligence older than form or story. It does not explain, it devours. And yet it is this very abyss—feral, formless—that births myth: the watery womb of Kintu and Nambi, the primordial terrain where Gulu cries out, and Walumbe answers. It is the same sea that Moses split, that the Middle Passage crossed, that refugees still perish in. It is memory undone, and truth uncurated. It is where we come from. And we are always trying to leave it.</p>
 <p>🚢 <strong>2. The Ship</strong></p>
 <p>The ship is culture. It is the creaky, paradoxical contraption that sails us through the abyss. Family, language, rituals, ideologies, school uniforms, bedtime prayers, national anthems—they are all the rivets and ropes that hold it together. But the ship is also inheritance. A great vessel already in motion, filled with whispers and rules. We did not build it. We did not choose the flag it flies. We woke up on its deck, already dressed in assumptions. Whether that deck is colonial English, evangelical America, or DEI bureaucracy, the key is this: we did not choose our ship. We inherited it—mid-journey, mid-storm.</p>
