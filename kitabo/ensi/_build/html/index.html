@@ -510,12 +510,83 @@ document.write(`
     background: rgba(255, 255, 255, 1);
     text-decoration: none;
 }
+
+.float-right {
+    float: right;
+    width: 35%;
+    height: auto;
+    margin-left: 15px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+/* Default bubble style (for emoji icons) */
+.image-bubble {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.image-bubble:hover {
+    background: rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+
+/* 🎯 Overrides only when using layered screen icon */
+.image-bubble.layered-icon {
+    background: none;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    box-shadow: none;
+}
+
+/* Larger square (base screen) */
+.large-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ddd;
+    border: 1px solid #888;
+    border-radius: 2px;
+}
+
+/* Smaller screen at 7 o'clock */
+.small-icon {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #aaa;
+    border: 1px solid #666;
+    border-radius: 2px;
+    bottom: -3px;
+    left: -3px;
+}
+
 </style>
 
 <div class="float-right">
-    <a href="https://m.media-amazon.com/images/I/71xEAh8cYlL._SY522_.jpg" target="_blank">
-        <img src="https://m.media-amazon.com/images/I/71xEAh8cYlL._SY522_.jpg" alt="Eco-Green QR Code" width="100%">
-    </a>
+    <a class="image-bubble layered-icon" href="https://m.media-amazon.com/images/I/71xEAh8cYlL._SY522_.jpg" target="_blank" title="Click to enlarge">
+  <div class="large-icon"></div>
+  <div class="small-icon"></div>
+</a>
+
     <p>🪡🔥🛠️🏝️ Our most distilled rendering yet—Ugandan-American-Human not as label but as mythos. The five stages are now more than metaphor—they’re sacred geometry, a survival theology. And that last line? <i>In medias grace</i>? That’s scripture.
     </p>
     
