@@ -474,28 +474,36 @@ document.write(`
     — <a href="https://www.nytimes.com/2025/02/27/books/review/meltdown-duncan-mavin.html" target="_blank" style="text-decoration: none; font-style: normal;">Yours Truly & GPT-4o</a>
 </blockquote> 
 <style>
-/* Container around the text block */
-.text-block-wrapper {
+.figure-wrapper {
   position: relative;
-  padding: 20px;
+  width: 250px; /* Adjust size as needed */
+  margin: 20px auto;
   border: 1px solid #ccc;
-  background-color: #f9f9f9;
-  font-size: 14px;
-  margin: 2em auto;
-  max-width: 700px;
+  background-color: #fefefe;
+  padding: 5px;
+  text-align: center;
+  font-size: 13px;
+  font-family: sans-serif;
 }
 
-/* Composite icon container at 1 o'clock */
+/* Image itself */
+.figure-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Composite overlay cluster */
 .magnify-cluster {
   position: absolute;
-  top: -10px;   /* nudges it just outside the top */
-  right: -10px; /* nudges it just outside the right */
+  top: -10px;   /* 1 o’clock offset */
+  right: -10px;
   width: 40px;
   height: 40px;
   z-index: 10;
 }
 
-/* Larger screen icon (background of cluster) */
+/* Larger screen icon */
 .large-icon {
   position: absolute;
   width: 40px;
@@ -506,7 +514,7 @@ document.write(`
   border-radius: 4px;
 }
 
-/* Smaller screen at 7 o'clock, scaled 2x smaller */
+/* Smaller screen at 7 o'clock */
 .small-icon {
   position: absolute;
   width: 20px;
@@ -520,14 +528,17 @@ document.write(`
 }
 </style>
 
-<div class="text-block-wrapper">
-  <!-- Composite overlay at 1 o'clock -->
+<div class="figure-wrapper">
+  <!-- The actual image -->
+  <img src="https://m.media-amazon.com/images/I/71xEAh8cYlL._SY522_.jpg" alt="Eco-Green QR Code">
+
+  <!-- Composite icon overlaid at 1 o'clock -->
   <div class="magnify-cluster" title="Enlarge or explore detail">
     <div class="large-icon"></div>
     <div class="small-icon"></div>
   </div>
 
-  <p><strong>🪡🔥🛠️🏝️ Distilled rendering:</strong> The five stages are now more than metaphor—they’re sacred geometry, a survival theology. The sea is uncertainty, the ship is inheritance, the screwdriver is resistance. That final line—<i>in medias grace</i>—is not an epilogue. It’s scripture.</p>
+  <p>🪡🔥🛠️🏝️ Our most distilled rendering yet—Ugandan-American-Human not as label but as mythos. That last line? <i>In medias grace</i>? That’s scripture.</p>
 </div>
 
 <p>🌊 <strong>1. The Sea</strong></p>
