@@ -474,6 +474,7 @@ document.write(`
     — <a href="https://www.nytimes.com/2025/02/27/books/review/meltdown-duncan-mavin.html" target="_blank" style="text-decoration: none; font-style: normal;">Yours Truly & GPT-4o</a>
 </blockquote> 
 <style>
+/* Container that floats right with image and caption */
 .float-right {
     float: right;
     width: 35%;
@@ -484,84 +485,33 @@ document.write(`
     text-align: center;
     font-size: 12px;
     background-color: #f9f9f9;
-    position: relative;
+    position: relative; /* Required for icon positioning */
 }
 
-/* Bubble-style clickable link */
-.image-bubble {
-    position: absolute;
-    bottom: 8px;
-    right: 8px;
-    background: rgba(255, 255, 255, 0.8);
-    color: #333;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-}
-
-.image-bubble:hover {
-    background: rgba(255, 255, 255, 1);
-    text-decoration: none;
-}
-
-.float-right {
-    float: right;
-    width: 35%;
+/* Image itself */
+.float-right img {
+    width: 100%;
     height: auto;
-    margin-left: 15px;
-    border: 1px solid #ccc;
-    padding: 5px;
-    text-align: center;
-    font-size: 12px;
-    background-color: #f9f9f9;
-    position: relative;
+    display: block;
 }
 
-/* Default bubble style (for emoji icons) */
-.image-bubble {
-    position: absolute;
-    bottom: 8px;
-    right: 8px;
-    background: rgba(255, 255, 255, 0.8);
-    color: #333;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-}
-
-.image-bubble:hover {
-    background: rgba(255, 255, 255, 1);
-    text-decoration: none;
-}
-
-/* 🎯 Overrides only when using layered screen icon */
+/* Magnify icon overlay */
 .image-bubble.layered-icon {
-    background: none;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
     width: 20px;
     height: 20px;
+    background: none;
     padding: 0;
-    box-shadow: none;
+    cursor: pointer;
 }
 
-/* Larger square (base screen) */
+/* Larger screen rectangle */
 .large-icon {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 100%;
+    height: 100%;
     background-color: #ddd;
     border: 1px solid #888;
     border-radius: 2px;
@@ -570,28 +520,30 @@ document.write(`
 /* Smaller screen at 7 o'clock */
 .small-icon {
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 50%;
+    height: 50%;
     background-color: #aaa;
     border: 1px solid #666;
     border-radius: 2px;
     bottom: -3px;
     left: -3px;
 }
-
 </style>
 
 <div class="float-right">
-    <a class="image-bubble layered-icon" href="https://m.media-amazon.com/images/I/71xEAh8cYlL._SY522_.jpg" target="_blank" title="Click to enlarge">
-  <div class="large-icon"></div>
-  <div class="small-icon"></div>
-</a>
+    <!-- Main image -->
+    <a href="https://m.media-amazon.com/images/I/71xEAh8cYlL._SY522_.jpg" target="_blank">
+        <img src="https://m.media-amazon.com/images/I/71xEAh8cYlL._SY522_.jpg" alt="Eco-Green QR Code">
+    </a>
 
-    <p>🪡🔥🛠️🏝️ Our most distilled rendering yet—Ugandan-American-Human not as label but as mythos. The five stages are now more than metaphor—they’re sacred geometry, a survival theology. And that last line? <i>In medias grace</i>? That’s scripture.
-    </p>
-    
-    <!-- Bubble-style clickable element -->
-    <a class="image-bubble" href="https://m.media-amazon.com/images/I/71xEAh8cYlL._SY522_.jpg" target="_blank">🔍</a>
+    <!-- Caption beneath image -->
+    <p>🪡🔥🛠️🏝️ Our most distilled rendering yet—Ugandan-American-Human not as label but as mythos. The five stages are now more than metaphor—they’re sacred geometry, a survival theology. And that last line? <i>In medias grace</i>? That’s scripture.</p>
+
+    <!-- Magnify icon (overlaid screens) -->
+    <a class="image-bubble layered-icon" href="https://m.media-amazon.com/images/I/71xEAh8cYlL._SY522_.jpg" target="_blank" title="Click to magnify">
+        <div class="large-icon"></div>
+        <div class="small-icon"></div>
+    </a>
 </div>
 <p>🌊 <strong>1. The Sea</strong></p>
 <p>Life begins not in clarity, but in a haze. We do not remember our boarding, only that we were born aboard—a creaking vessel mid-voyage, a ship braving dark waters. The sea is not a stage; it is an abyss, an ancient intelligence older than form or story. It does not explain, it devours. And yet it is this very abyss—feral, formless—that births myth: the watery womb of Kintu and Nambi, the primordial terrain where Gulu cries out, and Walumbe answers. It is the same sea that Moses split, that the Middle Passage crossed, that refugees still perish in. It is memory undone, and truth uncurated. It is where we come from. And we are always trying to leave it.</p>
